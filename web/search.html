@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>AJAX Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+        <script src="AjaxScripts.js"></script>
+        <style>
+            table {
+                background-color: #888888; /* dark grey shows thru between th and td */
+                margin: auto; /* center table within its container */
+            }
+           thead td {
+                background-color: #608890;  /* dark green/blue */
+                color: white;
+                font-weight: bold;
+                padding: 4px 6px;  /* top/bottom then left/right */
+            }
+            th {
+                background-color: #F0F8FF; /* light green/blue */
+                padding: 2px 6px;  /* top/bottom then left/right */
+            }
+            tr{
+                background-color: white;
+                text-align:center;
+                padding: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div  id="container">
+            <div id="titleNav">
+                <div id="title">
+                    Soccer Tribune
+                </div>
+                <div id="nav">
+                    <a class="navLink" href="index.jsp">Home</a> | <a class="navLink" href="users.jsp">Users</a>
+                    | <a class="navLink" href="other.jsp">Teams</a> | <a class="navLink" href="assoc.jsp">Comments</a>
+                    | <a class="navLink" href="search.jsp">Search</a> | <a class="navLink" href="members.jsp">Members</a>
+                    | <a class="navLink" href="Labs.jsp">Labs</a>
+                </div>
+                <span class="stopFloat"></span>
+            </div>
+            <div id="content">
+                User<span id ="userSpan">: </span>
+                <br/>
+                Team<span id="teamSpan">: </span>
+
+                <br/><br/>Enter a Date in YYYY-MM-DD Format
+                <input type="text" id="dateSearch" value="" size="30" />
+                <input type="button" value="Get Comment" onClick="javascript:ajaxGetData()"/>
+                <br/> <br/>
+                <div id="commentTable"></div>   
+            </div>
+            <div id="footer">
+                Dev Maru </br>
+                dev.maru@temple.edu
+            </div>
+        </div> <!-- container -->
+
+        <script>
+            ajaxGetSelectTags();
+        </script>
+
+
+
+    </body>
+</html>
